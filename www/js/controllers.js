@@ -1,4 +1,17 @@
-angular.module('starter.controllers', [])
+var app_vermist = angular.module('app_vermist', ['ngRoute'])
+
+.config(function($routeProvider) {
+        $routeProvider
+            .when('#/app/people/:personId', {
+                templateUrl : 'templates/person.html',
+                controller  : 'PersonCtrl'
+            })
+    })
+
+.controller("RouteController", function($scope, $routeParams) {
+    $scope.param = $routeParams.param;
+})
+
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -44,7 +57,7 @@ angular.module('starter.controllers', [])
 
 
 .controller('PeopleCtrl', function($scope, $http) {
-  $http.get('http://rr-websites.nl/testmap/webapp/').then(function(response){
+  $http.get('http://rr-websites.nl/testmap/webapp/index.php?id=2').then(function(response){
 
     $scope.people = response.data;
   });
@@ -52,7 +65,15 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-});
+.controller('PersonCtrl', function($scope, $http) {
+
+  console.log($scope)
 
 
+  $http.get('http://rr-websites.nl/testmap/webapp/index.php?id=2').then(function(response){
+
+    $scope.people = response.data;
+  });
+
+
+})
