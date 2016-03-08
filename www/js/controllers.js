@@ -43,43 +43,16 @@ angular.module('starter.controllers', [])
 
 
 
-// .controller('FetchController', ['$scope', '$http', '$templateCache',
-//   function($scope, $http, $templateCache) {
-//     $scope.method = 'GET';
-//     $scope.url = 'http://rr-websites.nl/testmap/webapp/';
+.controller('PeopleCtrl', function($scope, $http) {
+  $http.get('http://rr-websites.nl/testmap/webapp/').then(function(response){
 
-//     $scope.fetch = function() {
-//       $scope.code = null;
-//       $scope.response = null;
-
-//       $http({method: $scope.method, url: $scope.url, cache: $templateCache}).
-//         then(function(response) {
-//           $scope.status = response.status;
-//           $scope.data = response.data;
-//         }, function(response) {
-//           $scope.data = response.data || "Request failed";
-//           $scope.status = response.status;
-//       });
-//     };
-
-//     $scope.updateModel = function(method, url) {
-//       $scope.method = method;
-//       $scope.url = url;
-//     };
-//   }]);
+    $scope.people = response.data;
+  });
 
 
-
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });
+
+
