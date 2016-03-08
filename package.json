@@ -1,7 +1,7 @@
 {
-  "name": "vermistapp",
+  "name": "vermist",
   "version": "1.0.0",
-  "description": "",
+  "description": "vermist: An Ionic project",
   "main": "index.js",
   "dependencies": {
     "bootstrap": "^3.3.6"
@@ -24,5 +24,13 @@
   "bugs": {
     "url": "https://github.com/vermist/vermistapp/issues"
   },
-  "homepage": "https://github.com/vermist/vermistapp#readme"
+  "homepage": "https://github.com/vermist/vermistapp#readme",
+  "cordovaPlugins": [
+    "cordova-plugin-whitelist",
+    "cordova-plugin-console",
+    "cordova-plugin-device",
+    "cordova-plugin-splashscreen",
+    "ionic-plugin-keyboard"
+  ],
+  "cordovaPlatforms": []
 }
