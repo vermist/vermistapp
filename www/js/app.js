@@ -41,6 +41,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.vermistopgeven', {
+    url: '/vermistopgeven',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/vermistopgeven.html'
+      }
+    }
+  })
+
   .state('app.browse', {
       url: '/browse',
       views: {
