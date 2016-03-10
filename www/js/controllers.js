@@ -9,6 +9,7 @@ var app_vermist = angular.module('app_vermist', ['ngRoute'])
     })
 
 .controller("RouteController", function($scope, $routeParams) {
+  console.log($routeParams)
     $scope.param = $routeParams.param;
 })
 
@@ -57,7 +58,7 @@ var app_vermist = angular.module('app_vermist', ['ngRoute'])
 
 
 .controller('PeopleCtrl', function($scope, $http) {
-  $http.get('http://rr-websites.nl/testmap/webapp/index.php?id=2').then(function(response){
+  $http.get('http://rr-websites.nl/testmap/webapp/index.php').then(function(response){
 
     $scope.people = response.data;
   });
@@ -65,12 +66,10 @@ var app_vermist = angular.module('app_vermist', ['ngRoute'])
 
 })
 
-.controller('PersonCtrl', function($scope, $http) {
-
-  console.log($scope)
-
-
-  $http.get('http://rr-websites.nl/testmap/webapp/index.php?id=2').then(function(response){
+.controller('PersonCtrl', function($scope, $http ,$location) {
+  var path = $location.path();
+  var split = path.split('/');
+  $http.get('http://rr-websites.nl/testmap/webapp/index.php?id=' + split[3]).then(function(response){
 
     $scope.people = response.data;
   });

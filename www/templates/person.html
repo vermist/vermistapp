@@ -1,5 +1,37 @@
-<ion-view view-title="{{ person.naam }}">
+<ion-view view-title="Vermist">
   <ion-content>
-    <h1>{{ person.naam }}</h1>
+    <ion-list ng-repeat="person in people">
+      <ion-item>
+		{{ person.foto }}
+	  </ion-item>
+	  <ion-item>
+		Naam: {{ person.naam }}
+		 </ion-item>
+		<ion-item>
+		Leeftijd: {{ person.leeftijd }}
+		</ion-item>
+		<ion-item>
+		geslacht: {{ person.geslacht }}
+		</ion-item>
+		<ion-item>
+		Haarkleur: {{ person.haarkleur }}
+		</ion-item>
+		<ion-item>
+		Lengte: {{ person.lengte }} cm
+		</ion-item>
+		<ion-item>
+		Oogkleur: {{ person.oogkleur }}
+		</ion-item>
+		<ion-item>
+		Woonplaats: {{ person.woonplaats }}
+		</ion-item>
+		<ion-item>
+		Laatstgezien: {{ person.laatstgezien }}
+		</ion-item>
+		<ion-item>
+		Beschrijving: {{ person.beschrijving }}
+      	</ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
+
