@@ -50,14 +50,15 @@ angular.module('starter', ['ionic', 'app_vermist'])
     }
   })
 
-  .state('app.accountaanmaken', {
-      url: '/accountaanmaken',
+  .state('app.browse', {
+      url: '/browse',
       views: {
         'menuContent': {
-          templateUrl: 'templates/accountaanmaken.html'
+          templateUrl: 'templates/browse.html'
         }
       }
     })
+
     .state('app.people', {
       url: '/people',
       views: {
