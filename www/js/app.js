@@ -22,6 +22,9 @@ angular.module('starter', ['ionic', 'app_vermist'])
   });
 })
 
+/*angular.module('starter', ['ngAnimate'])*/
+
+
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
@@ -46,6 +49,15 @@ angular.module('starter', ['ionic', 'app_vermist'])
     views: {
       'menuContent': {
         templateUrl: 'templates/vermistopgeven.html'
+      }
+    }
+  })
+
+  .state('app.accountaanmaken', {
+    url: '/accountaanmaken',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/accountaanmaken.html'
       }
     }
   })

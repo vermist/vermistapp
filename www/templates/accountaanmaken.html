@@ -1,10 +1,27 @@
-<ion-view view-title="Vermist opgeven">
+<ion-view view-title="Account aanmaken">
   <ion-content>
-    <h1>Browse</h1>
-    test
+    <h1>Account aanmaken</h1>
+    <form method="post" ng-submit="submitForm(userForm$valid)" name="userForm" ng-controller="FormCtrl" novalidate style="background-color: indianred;">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" ng-model="user.email" required>
+        <p ng-show="userForm.email.$invalid && userForm.email.$touched" class="text-warning" style="color: orange;">Email is verplicht</p>
+      </div>
+      <div class="form-group">
+        <label for="wachtwoord">Wachtwoord</label>
+        <input type="password" ng-model="user.wachtwoord" required>
+        <p ng-show="userForm.wachtwoord.$invalid && userForm.wachtwoord.$touched" class="text-warning" style="color: orange;">Wachtwoord is verplicht</p>
+      </div>
+      <div class="form-group">
+        <label for="wachtwoordCheck">Wachtwoord herhalen</label>
+        <input type="password" name="password" ng-model="user.password" required>
+        <p ng-show="userForm.password.$invalid && userForm.password.$touched" class="text-warning">Het wachtwoord moet hetzelfde zijn</p>
+      </div>
+      <input type="submit" value="submit" class="btn btn-primary">
+    </form>
+
     	<ion-item ng-repeat="playlist in playlists">
-        	{{playlist.id}} test
-      	</ion-item>
+
   </ion-content>
 </ion-view>
 

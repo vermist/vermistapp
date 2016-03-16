@@ -76,3 +76,19 @@ var app_vermist = angular.module('app_vermist', ['ngRoute'])
 
 
 })
+
+.controller('LoginCtrl', function($scope, $http, $email, $wachtwoord){
+})
+
+.controller('FormCtrl', function($scope){
+
+
+  $scope.submitForm = function(valid){
+    if (valid) {
+      console.log('de form is gesubmit');
+    }else{
+      console.log('de form is niet valid');
+    }
+
+  }
+})
