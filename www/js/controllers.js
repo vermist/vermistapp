@@ -86,6 +86,7 @@ var app_vermist = angular.module('app_vermist', ['ngRoute'])
   $scope.submitForm = function(valid){
     if (valid) {
       console.log('de form is gesubmit');
+      $http.post('http://rr-websites.nl/testmap/webapp/index.php?id=').then(function(response){
     }else{
       console.log('de form is niet valid');
     }
