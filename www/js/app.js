@@ -64,7 +64,7 @@ angular.module('starter', ['ionic', 'app_vermist'])
 
 
 
-    .state('app.people', {
+    .state('app.recepten', {
       url: '/recepten',
       views: {
         'menuContent': {
@@ -74,8 +74,8 @@ angular.module('starter', ['ionic', 'app_vermist'])
       }
     })
 
-  .state('app.single', {
-    url: '/recepten/:personId',
+  .state('app.recept', {
+    url: '/recepten/:receptId',
     views: {
       'menuContent': {
         templateUrl: 'templates/recept.html',
@@ -84,5 +84,5 @@ angular.module('starter', ['ionic', 'app_vermist'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/people');
+  $urlRouterProvider.otherwise('/app/recepten');
 });

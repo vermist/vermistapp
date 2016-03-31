@@ -66,7 +66,7 @@ var app_vermist = angular.module('app_vermist', ['ngRoute'])
 
 })
 
-.controller('receptCtrl', function($scope, $http ,$location) {
+.controller('ReceptCtrl', function($scope, $http ,$location) {
   var path = $location.path();
   var split = path.split('/');
   $http.get('http://rr-websites.nl/testmap/webapp/index.php?id=' + split[3]).then(function(response){
