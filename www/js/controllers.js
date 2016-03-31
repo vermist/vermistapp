@@ -80,14 +80,18 @@ var app_vermist = angular.module('app_vermist', ['ngRoute'])
 .controller('LoginCtrl', function($scope, $http, $email, $wachtwoord){
 })
 
-.controller('FormCtrl', function($scope){
+.controller('FormCtrl', function($scope, $http){
 
 
   $scope.submitForm = function(valid){
     if (valid) {
       console.log('de form is gesubmit');
-      $http.post('http://rr-websites.nl/testmap/webapp/index.php?id=').then(function(response){});
+
+      $http.post('http://rr-websites.nl/testmap/webapp/index.php?id=').then(function(response){
+
+      });
        } else{
+
       console.log('de form is niet valid');
     }
 
