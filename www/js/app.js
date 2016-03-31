@@ -62,31 +62,24 @@ angular.module('starter', ['ionic', 'app_vermist'])
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
-      }
-    })
+
 
     .state('app.people', {
-      url: '/people',
+      url: '/recepten',
       views: {
         'menuContent': {
-          templateUrl: 'templates/people.html',
-          controller: 'PeopleCtrl'
+          templateUrl: 'templates/recepten.html',
+          controller: 'ReceptenCtrl'
         }
       }
     })
 
   .state('app.single', {
-    url: '/people/:personId',
+    url: '/recepten/:personId',
     views: {
       'menuContent': {
-        templateUrl: 'templates/person.html',
-        controller: 'PersonCtrl'
+        templateUrl: 'templates/recept.html',
+        controller: 'ReceptCtrl'
       }
     }
   });
