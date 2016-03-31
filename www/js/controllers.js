@@ -3,8 +3,8 @@ var app_vermist = angular.module('app_vermist', ['ngRoute'])
 .config(function($routeProvider) {
         $routeProvider
             .when('#/app/people/:personId', {
-                templateUrl : 'templates/person.html',
-                controller  : 'PersonCtrl'
+                templateUrl : 'templates/recept.html',
+                controller  : 'ReceptCtrl'
             })
     })
 
@@ -57,21 +57,21 @@ var app_vermist = angular.module('app_vermist', ['ngRoute'])
 
 
 
-.controller('PeopleCtrl', function($scope, $http) {
+.controller('ReceptenCtrl', function($scope, $http) {
   $http.get('http://rr-websites.nl/testmap/webapp/index.php').then(function(response){
 
-    $scope.people = response.data;
+    $scope.recepten = response.data;
   });
 
 
 })
 
-.controller('PersonCtrl', function($scope, $http ,$location) {
+.controller('receptCtrl', function($scope, $http ,$location) {
   var path = $location.path();
   var split = path.split('/');
   $http.get('http://rr-websites.nl/testmap/webapp/index.php?id=' + split[3]).then(function(response){
 
-    $scope.people = response.data;
+    $scope.recepten = response.data;
   });
 
 
